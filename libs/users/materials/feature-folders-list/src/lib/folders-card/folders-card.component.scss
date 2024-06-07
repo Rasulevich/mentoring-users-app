@@ -1,0 +1,19 @@
+.card_container {
+    height: 120px;
+    width: 150px;
+    margin: 20px;
+}
+
+.card_header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.card_button {
+    padding: 0;
+}
+
+.card_folder {
+    margin-left: 16px;
+}
