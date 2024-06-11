@@ -1,3 +1,6 @@
-<users-folders-list class="folders_list">
+<ng-container
+    *ngrxLet="{folders: folders$} as vm"
+>
+    <users-folders-list class="folders_list" [vm]="vm" (deleteFolderList)="deleteFolder($event)" />
+</ng-container>
 
-</users-folders-list>

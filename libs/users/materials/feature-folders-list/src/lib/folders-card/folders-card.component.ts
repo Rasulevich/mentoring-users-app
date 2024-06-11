@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule, registerLocaleData } from '@angular/common';
 import  localeRu  from '@angular/common/locales/ru';
 import {MatCardModule} from '@angular/material/card';
@@ -17,9 +17,13 @@ registerLocaleData(localeRu)
 })
 export class FoldersCardComponent {
   @Input({ required: true}) folder!: IFolderVM
+  @Output() deleteFolder = new EventEmitter();
 
-  public date(time:string){
-    console.log(time)
-    return new Date(+time).getDate()
+  public date(time: string){
+    return new Date(time).toLocaleDateString()
+  }
+
+  onDeleteFolder (folder: IFolderVM) {
+    this.deleteFolder.emit(folder)
   }
 }

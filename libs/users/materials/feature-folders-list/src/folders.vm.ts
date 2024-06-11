@@ -1,5 +1,5 @@
 export interface IFolderVM {
     id: number;
-    create_at: string;
+    created_at: string;
     title: string;
 }

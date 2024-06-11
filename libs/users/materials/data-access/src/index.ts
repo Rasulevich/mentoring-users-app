@@ -5,6 +5,7 @@ export * from './lib/+state/materials.facade';
 
 export * as materialsEffects from './lib/+state/materials.effects';
 
+export * from './lib/models/folder.model';
 
 
 
